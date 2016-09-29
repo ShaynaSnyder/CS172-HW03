@@ -52,12 +52,14 @@ int main()
 		cout << "Off\n";
 
 	//Exercise 9.6: Algebra: quadratic equations
+	double a1, b1, c1;
 	cout << "Enter 'a' value: ";
-	cin >> a;
+	cin >> a1;
 	cout << "Enter 'b' value: ";
-	cin >> b;
+	cin >> b1;
 	cout << "Enter 'c' value: ";
-	cin >> c;
+	cin >> c1;
+	QuadraticEquation quadratic1(a1, b1, c1);
 
 	//Exercise 9.11: The EvenNumber class
 

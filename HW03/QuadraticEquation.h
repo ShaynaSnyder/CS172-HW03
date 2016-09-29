@@ -1,36 +1,60 @@
 #pragma once
 #include <string>
+#include <iomanip>
 
 using namespace std;
 
-double getDiscriminant(int a, int b, int c);
-double getRoot1(int a, int b, double discriminant);
-double getRoot2(int a, int b, double discriminant);
-
 class QuadraticEquation
 {
-	int a, b, c;
-	double discriminant;
-	discriminant = getDiscriminant(a, b, c);
-	getRoot1(a, b, discriminant);
-	getRoot2(a, b, discriminant);
+public:
+	double a, b, c;
+	//int geta();
+	//int getb();
+	//int getc();
+	//double getDiscriminant(int a, int b, int c);
+	//double getRoot1(double a, double b, double discriminant);
+	//double getRoot2(double a, double b, double discriminant);
+
+	double geta()
+	{
+
+	}
+
+	double getb()
+	{
+
+	}
+
+	double getc()
+	{
+
+	}
+	
+	QuadraticEquation(double a1, double b1, double c1)
+	{
+		a = a1;
+		b = b1;
+		c = c1;
+	}
+
+	double getDiscriminant(double a, double b, double c)
+	{
+		double discriminant;
+		discriminant = (b*b) - (4 * a*c);
+		return discriminant;
+	}
+
+	double getRoot1(double a, double b, double discriminant)
+	{
+		double r1;
+		r1 = (-1 * b + sqrt(discriminant)) / (2 * a);
+		return r1;
+	}
+
+	double getRoot2(double a, double b, double discriminant)
+	{
+		double r2;
+		r2 = (-1 * b - sqrt(discriminant)) / (2 * a);
+		return r2;
+	}
 };
-
-double getDiscriminant(int a, int b, int c);
-{
-	int discriminant;
-
-	return discriminant;
-}
-
-double getRoot1(int a, int b, double discriminant)
-{
-	double root1;
-
-}
-
-double getRoot2(int a, int b, double discriminant)
-{
-	double root2;
-
-}
