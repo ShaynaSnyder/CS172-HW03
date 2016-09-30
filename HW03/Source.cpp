@@ -41,7 +41,7 @@ int main()
 	cout << "Enter 'c' value: ";
 	cin >> c1;
 	QuadraticEquation quadratic1(a1, b1, c1);
-
+	cout << "The roots are: " << quadratic1.getRoot1(a1, b1, c1) << " and " << quadratic1.getRoot2(a1, b1, c1) << endl;
 
 
 	//Exercise 9.11: The EvenNumber class

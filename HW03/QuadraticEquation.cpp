@@ -27,23 +27,29 @@ int QuadraticEquation::getc()
 }
 
 
-double getDiscriminant(int a, int b, int c)
+double QuadraticEquation::getDiscriminant(int a, int b, int c)
 {
 	double discriminant;
 	discriminant = (b*b) - (4 * a*c);
 	return discriminant;
 }
 
-double getRoot1(int a, int b, double discriminant)
+double QuadraticEquation::getRoot1(int a, int b, double discriminant)
 {
 	double r1;
-	r1 = (-1 * b + sqrt(discriminant)) / (2 * a);
+	if (discriminant == 0)
+		r1 = 0;
+	else
+		r1 = (-1 * b + sqrt(discriminant)) / (2 * a);
 	return r1;
 }
 
-double getRoot2(int a, int b, double discriminant)
+double QuadraticEquation::getRoot2(int a, int b, double discriminant)
 {
 	double r2;
-	r2 = (-1 * b - sqrt(discriminant)) / (2 * a);
+	if (discriminant == 0)
+		r2 = 0;
+	else
+		r2 = (-1 * b - sqrt(discriminant)) / (2 * a);
 	return r2;
 }

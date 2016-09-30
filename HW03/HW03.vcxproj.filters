@@ -18,9 +18,18 @@
     <ClCompile Include="Source.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="QuadraticEquation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Fan.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="QuadraticEquation.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Fan.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
