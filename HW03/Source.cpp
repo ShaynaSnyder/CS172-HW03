@@ -7,31 +7,12 @@
 #include <iomanip>
 #include <string>
 #include <cstdbool>
+#include "Fan.h"
 #include "QuadraticEquation.h"
+
 using namespace std;
 
-class Fan
-{
-public:
-	int speed;
-	bool on;
-	//declares double data field that specifies fan radius
-	double radius;
-	//constructs a default fan object
-	Fan()
-	{
-		speed = 1;
-		on = false;
-		radius = 5;
-	}
-	//constructs a fan object
-	Fan(int newSpeed, bool newOn, double newRadius)
-	{
-		speed = newSpeed;
-		on = newOn;
-		radius = newRadius;
-	}
-};
+
 
 int main()
 {
@@ -52,7 +33,7 @@ int main()
 		cout << "Off\n";
 
 	//Exercise 9.6: Algebra: quadratic equations
-	double a1, b1, c1;
+	int a1, b1, c1;
 	cout << "Enter 'a' value: ";
 	cin >> a1;
 	cout << "Enter 'b' value: ";
@@ -60,6 +41,8 @@ int main()
 	cout << "Enter 'c' value: ";
 	cin >> c1;
 	QuadraticEquation quadratic1(a1, b1, c1);
+
+
 
 	//Exercise 9.11: The EvenNumber class
 
