@@ -7,6 +7,7 @@
 #include <iomanip>
 #include <string>
 #include <cstdbool>
+//including header files
 #include "Fan.h"
 #include "QuadraticEquation.h"
 
@@ -17,6 +18,7 @@ using namespace std;
 int main()
 {
 	//Exercise 9.2: The Fan class
+	//creates 2 Fan objects called fan1 and fan2
 	Fan fan1(3, true, 10);
 	Fan fan2(2, false, 5);
 
@@ -27,21 +29,35 @@ int main()
 	else if(fan1.on == 0)
 		cout << "Off";
 	cout << "\nFan 2\nSpeed: " << fan2.speed << "\nRadius: " << fan2.radius << endl;
+	//uses if statments to output correct information dependent on value of bool variable on
 	if (fan2.on == 1)
 		cout << "On\n";
 	else if (fan2.on == 0)
 		cout << "Off\n";
 
 	//Exercise 9.6: Algebra: quadratic equations
-	int a1, b1, c1;
+	//declaring double variables and prompting the user for their values
+	double a1, b1, c1, d1;
 	cout << "Enter 'a' value: ";
 	cin >> a1;
 	cout << "Enter 'b' value: ";
 	cin >> b1;
 	cout << "Enter 'c' value: ";
 	cin >> c1;
+	//creates QuadraticEquation object called quadratic1
 	QuadraticEquation quadratic1(a1, b1, c1);
-	cout << "The roots are: " << quadratic1.getRoot1(a1, b1, c1) << " and " << quadratic1.getRoot2(a1, b1, c1) << endl;
+	//uses get function to set d1 variable equal to the value of the discriminant
+	d1 = quadratic1.getDiscriminant(a1, b1, c1);
+	//uses if statements to output correct roots
+	//if discriminant is positive, two roots are given
+	if (d1 > 0)
+		cout << "The roots are: " << quadratic1.getRoot1(a1, b1, d1) << " and " << quadratic1.getRoot2(a1, b1, d1) << endl;
+	//if discriminant is 0, one root is given
+	else if (d1 == 0)
+		cout << "The root is: " << quadratic1.getRoot1(a1, b1, d1) << endl;
+	//if discriminant is negative, there are no roots
+	else
+		cout << "The equation has no real roots" << endl;
 
 
 	//Exercise 9.11: The EvenNumber class
