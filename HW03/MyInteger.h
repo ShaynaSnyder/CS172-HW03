@@ -59,7 +59,7 @@ public:
 	static bool isOdd(const MyInteger&);
 	static bool isPrime(const MyInteger&);
 	//declares constant bool functions equals(int) and equals(const MyIntegers&)
-	bool equals(int) const;
+	bool equals() const;
 	//const equals(const MyIntegers&);
 	//declares static bool function parseInt(const string&) that converts string to an int value
 	static bool parseInt(const string&);

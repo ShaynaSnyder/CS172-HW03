@@ -99,7 +99,7 @@ int main()
 		cout << "True";
 	else
 		cout << "False";
-	//
+	//prompting user to enter value for myInt
 	int myInt;
 	cout << "\nEnter an integer: ";
 	cin >> myInt;
@@ -123,5 +123,11 @@ int main()
 		cout << "True";
 	else
 		cout << "False";
+	//uses if statements to output values of constant function equals(int)
+	cout << "\nConstant function equals(int): ";
+	if (myInteger1.equals() == 0)
+		cout << "False";
+	else
+		cout << "True";
 	return 0;
 }

@@ -53,3 +53,11 @@ bool MyInteger::isPrime() const
 		return true;
 	}
 }
+//constant function equals(int) returns true if value in object is equal to specified value
+bool MyInteger::equals() const
+{
+	if (value == 29)
+		return true;
+	else
+		return false;
+}
