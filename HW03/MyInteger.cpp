@@ -5,6 +5,11 @@
 #include "MyInteger.h" //includes MyInteger header file
 using namespace std;
 
+//constructs default MyInteger object for the value 0
+MyInteger::MyInteger()
+{
+	value = 0;
+}
 //constructs a MyInteger object using new data
 MyInteger::MyInteger(int newValue)
 {
@@ -37,11 +42,14 @@ bool MyInteger::isPrime() const
 	//if value is 1 or 2, prime is true
 	if (value == 1 || value == 2)
 		return true;
-	//if value is evenly divisible by a number other than 1 and itself, prime is false
-	for (int x = 2; x <= value; x++)
+	else
 	{
-		if (value%x == 0)
-			return false;
+		//if value is evenly divisible by a number other than 1 and itself, prime is false
+		for (int i = 2; i < value; i++)
+		{
+			if (value%i == 0)
+				return false;
+		}
+		return true;
 	}
-	return true;
 }

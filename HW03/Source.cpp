@@ -7,6 +7,7 @@
 #include <iomanip>
 #include <string>
 #include <cstdbool>
+#include <algorithm>
 //including header files
 #include "Fan.h"
 #include "QuadraticEquation.h"
@@ -68,17 +69,59 @@ int main()
 	cout << "Previous even number: " << even1.getPrevious() << endl;
 
 	//Exercise 10.4: Sort characters in a string
-	string sort(string& s);
 	//prompts user to enter a string s
 	string s;
 	cout << "Enter a string s: ";
 	cin >> s;
-
-
-	cout << "The sorted string is: ";
+	//makes copy of original string to sort
+	std::string sortedS = s;
+	//uses default comparison
+	std::sort(sortedS.begin(), sortedS.end());
+	//sends out the sorted string
+	cout << "The sorted string is: " << sortedS;
 
 	//Exercise 10.10: The MyInteger class
-
-
+	//uses if statements to ouput values of const functions isEven(), isOdd(), and isPrime()
+	cout << "\nConstant integer: 29 \nConstant function isEven(): ";
+	if (MyInteger::isEven(29) == true)
+		cout << "True";
+	else
+		cout << "False";
+	//if value of isOdd is true, "True" is ouput, otherwise "False" is output
+	cout << "\nConstant function isOdd(): ";
+	if (MyInteger::isOdd(29) == true)
+		cout << "True";
+	else
+		cout << "False";
+	//if value of isPrime is true, "True" is ouput, otherwise "False" is output
+	cout << "\nConstant function isPrime(): ";
+	if (MyInteger::isPrime(29) == true)
+		cout << "True";
+	else
+		cout << "False";
+	//
+	int myInt;
+	cout << "\nEnter an integer: ";
+	cin >> myInt;
+	//creates MyInteger object called myInteger1 using int value myInt
+	MyInteger myInteger1(myInt);
+	//uses if statements to ouput values of static functions isEven(int), isOdd(int), and isPrime(int)
+	cout << "Static function isEven(int): ";
+	if (MyInteger::isEven(myInt) == true)
+		cout << "True";
+	else
+		cout << "False";
+	//if value of isOdd is true, "True" is ouput, otherwise "False" is output
+	cout << "\nStatic function isOdd(int): ";
+	if (MyInteger::isOdd(myInt) == true)
+		cout << "True";
+	else
+		cout << "False";
+	//if value of isPrime is true, "True" is ouput, otherwise "False" is output
+	cout << "\nStatic function isPrime(int): ";
+	if (MyInteger::isPrime(myInt) == true)
+		cout << "True";
+	else
+		cout << "False";
 	return 0;
 }
