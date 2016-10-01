@@ -14,6 +14,7 @@ public:
 	bool on;
 	//declares double data field that specifies fan radius
 	double radius;
+	//function for default Fan object
 	Fan();
 	//function for Fan using new values
 	Fan(int newSpeed, bool newOn, double newRadius);
