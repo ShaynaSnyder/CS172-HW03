@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <iomanip>
+#include "stdio.h"
 
 using namespace std;
 //creates Fan class

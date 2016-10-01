@@ -11,6 +11,7 @@
 #include "Fan.h"
 #include "QuadraticEquation.h"
 #include "EvenNumber.h"
+#include "MyInteger.h"
 
 using namespace std;
 
@@ -67,7 +68,14 @@ int main()
 	cout << "Previous even number: " << even1.getPrevious() << endl;
 
 	//Exercise 10.4: Sort characters in a string
+	string sort(string& s);
+	//prompts user to enter a string s
+	string s;
+	cout << "Enter a string s: ";
+	cin >> s;
 
+
+	cout << "The sorted string is: ";
 
 	//Exercise 10.10: The MyInteger class
 
