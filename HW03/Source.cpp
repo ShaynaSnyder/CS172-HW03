@@ -10,10 +10,9 @@
 //including header files
 #include "Fan.h"
 #include "QuadraticEquation.h"
+#include "EvenNumber.h"
 
 using namespace std;
-
-
 
 int main()
 {
@@ -59,9 +58,13 @@ int main()
 	else
 		cout << "The equation has no real roots" << endl;
 
-
 	//Exercise 9.11: The EvenNumber class
-
+	//creates EvenNumber object called even1 with value of 16
+	EvenNumber even1(16);
+	//uses get statements to output value, next, and previous
+	cout << "Even number: " << even1.getValue() << endl;
+	cout << "Next even number: " << even1.getNext() << endl;
+	cout << "Previous even number: " << even1.getPrevious() << endl;
 
 	//Exercise 10.4: Sort characters in a string
 

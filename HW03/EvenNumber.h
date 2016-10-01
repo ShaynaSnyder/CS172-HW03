@@ -16,4 +16,8 @@ public:
 	EvenNumber();
 	//function for EvenNumber using new values
 	EvenNumber(int newValue);
+	//declares get functions for the value, the next even number, and the previous even number
+	int getValue();
+	int getNext();
+	int getPrevious();
 };
